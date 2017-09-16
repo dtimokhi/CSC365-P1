@@ -21,20 +21,20 @@ def runSearch():
        third = ""
        if(len(choice)>0):
            first=choice.split()[0]
-           firstLet = first[0].lower()
+           firstLet = first[0]
            if(len(choice.split()) > 1):
                second=choice.split()[1]
-               secondLet = second[0].lower()
+               secondLet = second[0]
                if(len(choice.split()) > 2):
                   third=choice.split()[2]
-                  thirdLet =third[0].lower()  
-       if(first.lower() == "s:" or first.lower() == "student:"):
+                  thirdLet =third[0]  
+       if(first == "s:" or first == "student:"):
            print("Student")
-       if(first.lower() == "teacher:" or first.lower() == "t:"):
+       if(first == "teacher:" or first == "t:"):
            print("Teacher")
-       if(first.lower() == "bus:" or first.lower() == "b:"):
+       if(first == "bus:" or first == "b:"):
            print("Bus")
-       if(first.lower() == "grade:" or first.lower() == "g:"):
+       if(first == "grade:" or first == "g:"):
          try:
             if(third == ""):
                for name in getGradeSearch(studentList, int(second)):
@@ -43,14 +43,14 @@ def runSearch():
                print(getGradeSearch(studentList, int(second), third))
          except:
             continue
-       if((first.lower() == "average:" or first.lower() == "a:")):
+       if((first == "average:" or first == "a:")):
          try:
            print(getAverage(studentList, int(second)))
          except:
             continue
-       if(first.lower() == "i" or first.lower() == "info"):
+       if(first == "i" or first == "info"):
            print("Info")
-       if(first.lower() == "q" or first.lower()== "quit"):
+       if(first == "q" or first== "quit"):
            q=1
        else:
            q=0
