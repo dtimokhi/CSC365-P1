@@ -32,9 +32,19 @@ def runSearch():
        if(first == "s:" or first == "student:"):
            print("Student")
        if(first == "teacher:" or first == "t:"):
-           print("Teacher")
+         s = ","
+         try:
+            for name in getTeacher(studentList, second):
+               print(s.join(name))
+         except:
+            continue
        if(first == "bus:" or first == "b:"):
-           print("Bus")
+         s = ","
+         try:
+            for name in getBus(studentList, int(second)):
+               print(s.join(name))
+         except:
+            continue
        if(first == "grade:" or first == "g:"):
         s = ","
         try:
@@ -47,7 +57,8 @@ def runSearch():
           continue
        if((first == "average:" or first == "a:")):
           try:
-             print(getAverage(studentList, int(second)))
+             tmpList = getAverage(studentList, int(second))
+             print(str(tmpList[0]) + "," + str(tmpList[1]))
           except:
              continue
        if(first == "i" or first == "info"):
