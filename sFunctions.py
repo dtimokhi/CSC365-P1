@@ -1,3 +1,5 @@
+from statistics import mean
+
 def openFile():
    studentsDat = open('students.txt', 'r')
    fullDatList = []
@@ -28,10 +30,10 @@ def getTypeGpa(studentList, typeGpa):
    outList = list(studentList)
    for num, student in enumerate(studentList):
       outList[num] = student[5]
-   if typeGpa == "h":
+   if (typeGpa == "h") | (typeGpa == "high"):
       maxGpa = outList.index(max(outList))
       gpaStudent = studentList[maxGpa]
-   elif typeGpa == "l":
+   elif (typeGpa == "l") | (typeGpa == "low"):
       minGpa = outList.index(min(outList))
       gpaStudent = studentList[minGpa]
    return(gpaStudent)
@@ -53,3 +55,25 @@ def getAverage(studentList, gradeNumber):
    outList = list(map(float, outList))
    avgGpa = mean(outList)
    return([gradeNumber, avgGpa])
+def getInfo(studentList):
+   outList = []
+   for grade in range(7):
+      n = 0
+      for student in studentList:
+         if int(student[2]) == grade:
+            n = n + 1
+      tmpList = [grade, n]
+      outList.append(tmpList)
+   return outList
+
+
+
+
+
+
+
+
+
+
+
+
