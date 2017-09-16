@@ -65,6 +65,20 @@ def getInfo(studentList):
       tmpList = [grade, n]
       outList.append(tmpList)
    return outList
+def getBus(studentList, busNum):
+   indexList = []
+   for num, student in enumerate(studentList):
+      if int(student[4]) == busNum: 
+         indexList.append(student)
+   tmpList = getFirstLast(indexList)
+   return(tmpList)
+def getTeacher(studentList, teachName):
+   indexList = []
+   for num, student in enumerate(studentList):
+      if student[6] == teachName.upper(): 
+         indexList.append(student)
+   tmpList = getFirstLast(indexList)
+   return(tmpList)
 
 
 

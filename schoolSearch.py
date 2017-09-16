@@ -47,30 +47,41 @@ def runSearch():
       if(first == "s:" or first == "student:"):
          print("Student")
       if(first == "teacher:" or first == "t:"):
-         print("Teacher")
+         s = ","
+         try:
+            for name in getTeacher(studentList, second):
+               print(s.join(name))
+         except:
+            continue
       if(first == "bus:" or first == "b:"):
-         print("Bus")
+         s = ","
+         try:
+            for name in getBus(studentList, int(second)):
+               print(s.join(name))
+         except:
+            continue
       if(first == "grade:" or first == "g:"):
-      s = ","
-      try:
-         if(thirdLet == ""):
-         for name in getGradeSearch(studentList, int(second)):
-            print(s.join(name))
-         else:
-            print(s.join(getGradeSearch(studentList, int(second), third)))
-      except:
-         continue
+         s = ","
+         try:
+             if(thirdLet == ""):
+                 for name in getGradeSearch(studentList, int(second)):
+                     print(s.join(name))
+                 else:
+                   print(s.join(getGradeSearch(studentList, int(second), third)))
+         except:
+             continue
       if((first == "average:" or first == "a:")):
          try:
-            print(getAverage(studentList, int(second)))
+            tmpList = getAverage(studentList, int(second))
+            print(str(tmpList[0]) + "," + str(tmpList[1]))
          except:
             continue
       if(first == "i" or first == "info"):
          try:
             for grade in getInfo(studentList):
-               print(str(grade[0]) + ": " + str(grade[1]))
-          except:
-             continue
+              print(str(grade[0]) + ": " + str(grade[1]))
+         except:
+            continue
       if(first == "q" or first== "quit"):
          q=1
       else:
