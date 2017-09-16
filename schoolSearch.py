@@ -63,7 +63,5 @@ def runSearch():
 
 runSearch()
 
-studentListTmp = openFile()
-print(getFirstLast(studentListTmp))
 
 
