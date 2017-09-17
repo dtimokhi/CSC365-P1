@@ -41,7 +41,17 @@ def runSearch():
       
       # Student command
       if(first == "s:" or first == "student:"):
-         print("Student")
+         s = ","
+         #try:
+         if(third == ""):
+            for name in getStudent(studentList, second):
+               print(s.join(name))
+         else:
+            for name in getStudent(studentList, second, third):
+               print(s.join(name))
+         #except:
+            #continue;
+
       # Teacher command
       if(first == "teacher:" or first == "t:"):
          # Separator for .join()

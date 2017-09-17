@@ -1,6 +1,7 @@
 # Import mean function
 from statistics import mean
 
+# Open File
 def openFile():
    # Open .txt file
    studentsDat = open('students.txt', 'r')
@@ -16,6 +17,26 @@ def openFile():
    # Return double array
    return(fullDatList)
 
+# Get grade command
+# Takes: studentList(2DArr)
+# gradeNumber(int)
+# typeGpa(String)
+def getGradeSearch(studentList, gradeNumber, typeGpa = "none"):
+   if(typeGpa != "none"):
+      # Find the highest/lowest gpa
+      gradeStudents = getGradeValues(studentList, gradeNumber)
+      # Return row of high/low gpa
+      gpaStudent = getTypeGpa(gradeStudents, typeGpa)
+   else:
+      # Find all students with that gradeNumber
+      gradeStudents = getGradeValues(studentList, gradeNumber)
+      # Return rows of all
+      gpaStudent = getFirstLast(gradeStudents)
+   return(gpaStudent)
+
+# Returns a 2DArr with students in that gradeNumber
+# Takes: studentList(2DArr)[row][col]
+# gradeNumber(int)
 def getGradeValues(studentList, gradeNumber):
    tmpList = list(studentList)
    indexList = []
@@ -26,12 +47,9 @@ def getGradeValues(studentList, gradeNumber):
       del tmpList[index]
    return(tmpList)
 
-def getFirstLast(studentList):
-   outList = list(studentList)
-   for num, student in enumerate(studentList):
-      outList[num] = [student[0], student[1]]
-   return(outList)
-
+# Return row of highest/lowest gpa
+# Takes: studentList(2DArr)
+# typeGpa(String)
 def getTypeGpa(studentList, typeGpa):
    outList = list(studentList)
    for num, student in enumerate(studentList):
@@ -44,24 +62,16 @@ def getTypeGpa(studentList, typeGpa):
       gpaStudent = studentList[minGpa]
    return(gpaStudent)
 
-def getGradeSearch(studentList, gradeNumber, typeGpa = "none"):
-   if(typeGpa != "none"):
-      gradeStudents = getGradeValues(studentList, gradeNumber)
-      gpaStudent = getTypeGpa(gradeStudents, typeGpa)
-   else:
-      gradeStudents = getGradeValues(studentList, gradeNumber)
-      gpaStudent = getFirstLast(gradeStudents)
-   return(gpaStudent)
+# Returns 2DArr[Row][0=last,1=first]
+# Takes studentList(2DArr[Row][Factor])
+def getFirstLast(studentList):
+   outList = list(studentList)
+   for num, student in enumerate(studentList):
+      outList[num] = [student[0], student[1]]
+   return(outList)
 
-def getAverage(studentList, gradeNumber):
-   gradeList = getGradeValues(studentList, gradeNumber)
-   outList = list(gradeList)
-   for num, student in enumerate(gradeList):
-      outList[num] = student[5]
-   outList = list(map(float, outList))
-   avgGpa = mean(outList)
-   return([gradeNumber, avgGpa])
-
+# Returns 2DArr[grade][grade=0,n=1]
+# Takes: studentList(2DArr)
 def getInfo(studentList):
    outList = []
    for grade in range(7):
@@ -73,6 +83,22 @@ def getInfo(studentList):
       outList.append(tmpList)
    return outList
 
+# Returns Arr[0=gradeNumber,1=avgGpa]
+# Takes studentList(2DArr)
+# gradeNumber(int)
+def getAverage(studentList, gradeNumber):
+   gradeList = getGradeValues(studentList, gradeNumber)
+   # Make deep copy
+   outList = list(gradeList)
+   for num, student in enumerate(gradeList):
+      outList[num] = student[5]
+   outList = list(map(float, outList))
+   avgGpa = mean(outList)
+   return([gradeNumber, avgGpa])
+
+# Return 2DArr[row][0=last,1=first]
+# Take: studentList(2DArr)
+# busNum(int)
 def getBus(studentList, busNum):
    indexList = []
    for num, student in enumerate(studentList):
@@ -81,6 +107,9 @@ def getBus(studentList, busNum):
    tmpList = getFirstLast(indexList)
    return(tmpList)
 
+# Return 2DArr[row][0=last,1=first]
+# Takes: studentList(2DArr)
+# teachName(String)
 def getTeacher(studentList, teachName):
    indexList = []
    for num, student in enumerate(studentList):
@@ -89,14 +118,39 @@ def getTeacher(studentList, teachName):
    tmpList = getFirstLast(indexList)
    return(tmpList)
 
+# Return 
+def getStudent(studentList, studentName, bus = "none"):
+   if(bus == "none"):
+      # Find the highest/lowest gpa
+      gradeStudents = getNameValues(studentList, studentName)
+      # Return row of high/low gpa
+      gpaStudent = getS(gradeStudents)
+   else:
+      if(bus=="b")|(bus=="bus"):
+         # Find all students with that gradeNumber
+         gradeStudents = getNameValues(studentList, studentName)
+         # Return rows of all
+         gpaStudent = getSb(gradeStudents)
+   return(gpaStudent)
 
+def getNameValues(studentList, name):
+   indexList = []
+   for num, student in enumerate(studentList):
+      if student[0] == name.upper(): 
+         indexList.append(student)
+   return(indexList)
 
+def getS(studentList):
+   outList = list(studentList)
+   for num, student in enumerate(studentList):
+      outList[num] = [student[0], student[1],student[2],student[3],student[6],student[7]]
+   return(outList)
 
-
-
-
-
-
+def getSb(studentList):
+   outList = list(studentList)
+   for num, student in enumerate(studentList):
+      outList[num] = [student[0], student[1],student[4]]
+   return(outList)
 
 
 
