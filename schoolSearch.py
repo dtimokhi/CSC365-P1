@@ -1,4 +1,3 @@
-from statistics import mean
 from sFunctions import *
 
 # Run function

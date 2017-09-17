@@ -1,6 +1,3 @@
-# Import mean function
-from statistics import mean
-
 # Open File
 def openFile():
    # Open .txt file
@@ -93,7 +90,7 @@ def getAverage(studentList, gradeNumber):
    for num, student in enumerate(gradeList):
       outList[num] = student[5]
    outList = list(map(float, outList))
-   avgGpa = mean(outList)
+   avgGpa = sum(outList)/float(len(outList))
    return([gradeNumber, avgGpa])
 
 # Return 2DArr[row][0=last,1=first]
