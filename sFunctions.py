@@ -5,8 +5,8 @@ def openFile():
    fullDatList = []
    i = 0
    for num, line in enumerate(studentsDat):
-     fields = line.strip().split(",")
-     fullDatList.append(fields)
+      fields = line.strip().split(",")
+      fullDatList.append(fields)
    return(fullDatList)
 
 def getGradeValues(studentList, gradeNumber):
@@ -24,7 +24,6 @@ def getFirstLast(studentList):
    for num, student in enumerate(studentList):
       outList[num] = [student[0], student[1]]
    return(outList)
-
 
 def getTypeGpa(studentList, typeGpa):
    outList = list(studentList)
@@ -55,6 +54,7 @@ def getAverage(studentList, gradeNumber):
    outList = list(map(float, outList))
    avgGpa = mean(outList)
    return([gradeNumber, avgGpa])
+
 def getInfo(studentList):
    outList = []
    for grade in range(7):
@@ -65,6 +65,7 @@ def getInfo(studentList):
       tmpList = [grade, n]
       outList.append(tmpList)
    return outList
+
 def getBus(studentList, busNum):
    indexList = []
    for num, student in enumerate(studentList):
@@ -72,6 +73,7 @@ def getBus(studentList, busNum):
          indexList.append(student)
    tmpList = getFirstLast(indexList)
    return(tmpList)
+
 def getTeacher(studentList, teachName):
    indexList = []
    for num, student in enumerate(studentList):
