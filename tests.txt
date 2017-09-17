@@ -1,0 +1,223 @@
+// CSC 365. Fall 2017
+// Dmitriy Timokhin, Hanson Egbert
+// Lab 1-1 test suite
+
+// TC-1
+// Tests Requirement R1
+// running schoolSearch.py on the command line
+// expected output: Instruction:>
+
+python schoolSearch.py
+
+// TC-2-1
+// Tests Requirements R2, R3, R4
+// short form command name, existing student
+// expected output: COOKUS,XUAN,3,107,FAFARD,ROCIO
+//                  Instruction:>
+
+S: COOKUS
+
+// TC-2-2
+// Tests Requirements R3, R4
+// long form command name, existing student
+// expected output: COOKUS,XUAN,3,107,FAFARD,ROCIO
+//                  Instruction:>
+
+Student: COOKUS
+
+// TC-3-1
+// Tests Requirements R3, R5
+// short form command name, existing student, short form command name
+// expected output: COOKUS,XUAN,52
+//                  Instruction:>
+
+S: COOKUS B
+
+// TC-3-2
+// Tests Requirements R3, R5
+// long form command name, existing student, long form command name
+// expected output: COOKUS,XUAN,52
+//                  Instruction:>
+
+Student: COOKUS Bus
+
+// TC-4-1
+// Tests Requirements R3, R6
+// short form command name, existing teacher last name
+// expected output: COOKUS,XUAN
+//                  ELHADDAD,SHANTE
+//                  SWEDLUND,SHARRI
+//                  CIGANEK,MANIE
+//                  COVINGTON,TOMAS
+//                  EARLY,TORY
+//                  LINHART,LELA
+//                  Instruction:>
+
+T: FAFARD 
+
+// TC-4-2
+// Tests Requirements R3, R6
+// long form command name, existing teacher last name
+// expected output: COOKUS,XUAN
+//                  ELHADDAD,SHANTE
+//                  SWEDLUND,SHARRI
+//                  CIGANEK,MANIE
+//                  COVINGTON,TOMAS
+//                  EARLY,TORY
+//                  LINHART,LELA
+//                  Instruction:>
+
+Teacher: FAFARD 
+
+// TC-5-1
+// Tests Requirements R3, R7
+// short form command name, existing grade
+// expected output: SAELEE,DANILO
+//                  GARTH,JOHN
+//                  Instruction:>
+
+G: 1
+
+// TC-5-2
+// Tests Requirements R3, R7
+// long form command name, existing grade
+// expected output: SAELEE,DANILO
+//                  GARTH,JOHN
+//                  Instruction:>
+
+Grade: 1
+
+// TC-6-1
+// Tests Requirements R3, R8
+// short form command name, existing bus
+// expected output: COOKUS,XUAN
+//                  ELHADDAD,SHANTE
+//                  IMMERMAN,DEVIN
+//                  OBREIN,STAN
+//                  CORONADO,DIMPLE
+//                  SARAO,DIEDRA
+//                  EARLY,TORY
+//                  KEMERER,ROSETTA
+//                  Instruction:> 
+
+B: 52
+
+// TC-6-2
+// Tests Requirements R3, R8
+// long form command name, existing bus
+// expected output: COOKUS,XUAN
+//                  ELHADDAD,SHANTE
+//                  IMMERMAN,DEVIN
+//                  OBREIN,STAN
+//                  CORONADO,DIMPLE
+//                  SARAO,DIEDRA
+//                  EARLY,TORY
+//                  KEMERER,ROSETTA
+//                  Instruction:> 
+
+Bus: 52
+
+// TC-7-1
+// Tests Requirements R3, R9
+// short form command name, existing grade, High GPA
+// expected output: SWEDLUND,SHARRI,3,107,55,3.24,FAFARD,ROCIO
+//                  Instruction:>
+
+G: 3 H
+
+// TC-7-2
+// Tests Requirements R3, R9
+// long form command name, existing grade, High GPA
+// expected output: SWEDLUND,SHARRI,3,107,55,3.24,FAFARD,ROCIO
+//                  Instruction:>
+
+Grade: 3 High
+
+// TC-7-3
+// Tests Requirements R3, R9
+// short form command name, existing grade, Low GPA
+// expected output: CIGANEK,MANIE,3,107,53,2.79,FAFARD,ROCIO
+//                  Instruction:>
+
+G: 3 L
+
+// TC-7-3
+// Tests Requirements R3, R9
+// short form command name, existing grade, Low GPA
+// expected output: CIGANEK,MANIE,3,107,53,2.79,FAFARD,ROCIO
+//                  Instruction:>
+
+Grade: 3 Low
+
+// TC-8-1
+// Tests Requirements R3, R10
+// short form command name, existing grade
+// expected output: 3,3.048888888888889
+//                  Instruction:>
+
+A: 3 
+
+// TC-8-2
+// Tests Requirements R3, R10
+// long form command name, existing grade
+// expected output: 3,3.048888888888889
+//                  Instruction:>
+
+Average: 3 
+
+// TC-8-3
+// Tests Requirements R3, R10
+// long form command name, non-existing grade
+// expected output: 3,3.048888888888889
+//                  Instruction:>
+
+Average: 3 
+
+// TC-8-4
+// Tests Requirements R3, R10, E1
+// long form command name, non-existing grade, wrong-command input
+// expected output: Instruction:>
+
+Avrge: 3 
+
+// TC-9-1
+// Tests Requirements R3, R11
+// short form command name
+// expected output: 0: 0
+//                  1: 2
+//                  2: 13
+//                  3: 9
+//                  4: 15
+//                  5: 0
+//                  6: 21
+//                  Instruction:> 
+
+I
+
+// TC-9-2
+// Tests Requirements R3, R11
+// long form command name
+// expected output: 0: 0
+//                  1: 2
+//                  2: 13
+//                  3: 9
+//                  4: 15
+//                  5: 0
+//                  6: 21
+//                  Instruction:> 
+
+Info
+
+// TC-10-1
+// Tests Requirements R3, R12
+// quit command short form
+// expected output: program terminates
+
+Q
+
+// TC-10-2
+// Tests Requirements R3, R12
+// quit command long form
+// expected output: program terminates
+
+Quit

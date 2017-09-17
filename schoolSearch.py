@@ -5,7 +5,10 @@ from sFunctions import *
 
 def runSearch():
    # Get double array
-   studentList = openFile()
+   try:
+      studentList = openFile()
+   except:
+      return
    # Set running value
    # q = 0 = running
    # q = 1 = stopped

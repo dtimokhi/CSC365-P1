@@ -151,7 +151,7 @@ def getNameValues(studentList, name):
 def getS(studentList):
    outList = list(studentList)
    for num, student in enumerate(studentList):
-      outList[num] = [student[0], student[1],student[2],student[3],student[6],student[7]]
+      outList[num] = [student[0], student[1],student[2],student[3], student[6],student[7]]
    return(outList)
 
 # Returns a 2DArr with factors for student + bus
