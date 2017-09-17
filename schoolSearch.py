@@ -12,7 +12,7 @@ def runSearch():
    # Start running
    while(q==0):
       # Read User Input
-      choice = input("")
+      choice = input("Instruction:> ")
       # Cast input to lower case
       choice = choice.lower()
       # Set storage variables
