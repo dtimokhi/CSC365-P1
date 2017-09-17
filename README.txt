@@ -1,2 +1,2 @@
 To run the program type:
-python schoolsearch.py
+python3 schoolsearch.py
