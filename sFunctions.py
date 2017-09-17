@@ -51,6 +51,7 @@ def getGradeValues(studentList, gradeNumber):
 # Takes: studentList(2DArr)
 # typeGpa(String)
 def getTypeGpa(studentList, typeGpa):
+   print(typeGpa)
    outList = list(studentList)
    for num, student in enumerate(studentList):
       outList[num] = student[5]

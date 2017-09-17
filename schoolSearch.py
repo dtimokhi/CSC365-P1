@@ -74,14 +74,14 @@ def runSearch():
       if(first == "grade:" or first == "g:"):
          # Separator for .join()
          s = ","
-         try:
-            if(third == ""):
-               for name in getGradeSearch(studentList, int(second)):
-                  print(s.join(name))
-               else:
-                  print(s.join(getGradeSearch(studentList, int(second), third)))
-         except:
-            continue
+         #try:
+         if(third == ""):
+            for name in getGradeSearch(studentList, int(second)):
+               print(s.join(name))
+         else:
+            print(s.join(getGradeSearch(studentList, int(second), third)))
+         #except:
+            #continue
       # Average command
       if((first == "average:" or first == "a:")):
          try:
