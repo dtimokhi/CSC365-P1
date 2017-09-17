@@ -1,2 +1,2 @@
 To run the program type:
-<code>python schoolsearch.py</code>
+python schoolsearch.py
