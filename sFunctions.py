@@ -1,12 +1,19 @@
+# Import mean function
 from statistics import mean
 
 def openFile():
+   # Open .txt file
    studentsDat = open('students.txt', 'r')
+   # Make array list
    fullDatList = []
    i = 0
+   # enumerate give index as num and value as line
    for num, line in enumerate(studentsDat):
-      fields = line.strip().split(",")
-      fullDatList.append(fields)
+     # Strip a current line
+     fields = line.strip().split(",")
+     # Append to a double array
+     fullDatList.append(fields)
+   # Return double array
    return(fullDatList)
 
 def getGradeValues(studentList, gradeNumber):

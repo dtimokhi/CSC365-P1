@@ -1,24 +1,7 @@
 from statistics import mean
 from sFunctions import *
 
-# Open file
-
-def openFile():
-   # Open .txt file
-   studentsDat = open('students.txt', 'r')
-   # Make array list
-   fullDatList = []
-   i = 0
-   # enumerate give index as num and value as line
-   for num, line in enumerate(studentsDat):
-     # Strip a current line
-     fields = line.strip().split(",")
-     # Append to a double array
-     fullDatList.append(fields)
-   # Return double array
-   return(fullDatList)
-
-# Start running
+# Run function
 
 def runSearch():
    # Get double array
