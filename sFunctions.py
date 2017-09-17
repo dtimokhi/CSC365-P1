@@ -118,7 +118,10 @@ def getTeacher(studentList, teachName):
    tmpList = getFirstLast(indexList)
    return(tmpList)
 
-# Return 
+# Returns a 2DArr[row][factors depends on bus]
+# Takes: studentList(2DArr)
+# studentName(String)
+# bus(String) - Optional B/b or BUS/bus
 def getStudent(studentList, studentName, bus = "none"):
    if(bus == "none"):
       # Find the highest/lowest gpa
@@ -133,6 +136,9 @@ def getStudent(studentList, studentName, bus = "none"):
          gpaStudent = getSb(gradeStudents)
    return(gpaStudent)
 
+# Returns a 2DArr with factor 0 (Last name) matching to name
+# Takes: studentList(2DArr)
+# name(String)
 def getNameValues(studentList, name):
    indexList = []
    for num, student in enumerate(studentList):
@@ -140,12 +146,16 @@ def getNameValues(studentList, name):
          indexList.append(student)
    return(indexList)
 
+# Returns a 2DArr with factors for student
+# Takes: studentList(2DArr)
 def getS(studentList):
    outList = list(studentList)
    for num, student in enumerate(studentList):
       outList[num] = [student[0], student[1],student[2],student[3],student[6],student[7]]
    return(outList)
 
+# Returns a 2DArr with factors for student + bus
+# Takes: studentList(2DArr)
 def getSb(studentList):
    outList = list(studentList)
    for num, student in enumerate(studentList):
