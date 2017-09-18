@@ -1,0 +1,88 @@
+dtimokhi@unix2:~/csc365 $ python3 schoolSearch.py 
+Instruction:> S: COOKUS
+COOKUS,XUAN,3,107,FAFARD,ROCIO
+Instruction:> Student: COOKUS
+COOKUS,XUAN,3,107,FAFARD,ROCIO
+Instruction:> Student: Timokhin
+Instruction:> S: COOKUS B
+COOKUS,XUAN,52
+Instruction:> Student: COOKUS Bus
+COOKUS,XUAN,52
+Instruction:> T: FAFARD
+COOKUS,XUAN
+ELHADDAD,SHANTE
+SWEDLUND,SHARRI
+CIGANEK,MANIE
+COVINGTON,TOMAS
+EARLY,TORY
+LINHART,LELA
+Instruction:> Teacher: FAFARD
+COOKUS,XUAN
+ELHADDAD,SHANTE
+SWEDLUND,SHARRI
+CIGANEK,MANIE
+COVINGTON,TOMAS
+EARLY,TORY
+LINHART,LELA
+Instruction:> Teacher: Timokhin
+Instruction:> G: 1
+SAELEE,DANILO
+GARTH,JOHN
+Instruction:> Grade: 1
+SAELEE,DANILO
+GARTH,JOHN
+Instruction:> Grade: 10
+Instruction:> B: 52
+COOKUS,XUAN
+ELHADDAD,SHANTE
+IMMERMAN,DEVIN
+OBREIN,STAN
+CORONADO,DIMPLE
+SARAO,DIEDRA
+EARLY,TORY
+KEMERER,ROSETTA
+Instruction:> Bus: 52
+COOKUS,XUAN
+ELHADDAD,SHANTE
+IMMERMAN,DEVIN
+OBREIN,STAN
+CORONADO,DIMPLE
+SARAO,DIEDRA
+EARLY,TORY
+KEMERER,ROSETTA
+Instruction:> Bus: 510101
+Instruction:> G: 3 H
+SWEDLUND,SHARRI,3,107,55,3.24,FAFARD,ROCIO
+Instruction:> Grade: 3 High
+SWEDLUND,SHARRI,3,107,55,3.24,FAFARD,ROCIO
+Instruction:> G: 3 L
+CIGANEK,MANIE,3,107,53,2.79,FAFARD,ROCIO
+Instruction:> G: 3 Low
+CIGANEK,MANIE,3,107,53,2.79,FAFARD,ROCIO
+Instruction:> A: 3
+3,3.048888888888889
+Instruction:> Average: 3
+3,3.048888888888889
+Instruction:> Avrge: 3  
+Instruction:> I
+0: 0
+1: 2
+2: 13
+3: 9
+4: 15
+5: 0
+6: 21
+Instruction:> Info
+0: 0
+1: 2
+2: 13
+3: 9
+4: 15
+5: 0
+6: 21
+Instruction:> Q
+dtimokhi@unix2:~/csc365 $ python3 schoolSearch.py 
+Instruction:> Quit
+dtimokhi@unix2:~/csc365 $ python3 schoolSearch.py 
+dtimokhi@unix2:~/csc365 $ python3 schoolSearch.py 
+dtimokhi@unix2:~/csc365 $
