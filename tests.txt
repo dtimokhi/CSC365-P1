@@ -25,6 +25,13 @@ S: COOKUS
 
 Student: COOKUS
 
+// TC-2-3
+// Tests Requirements R3, R4
+// long form command name, non-existing student
+// expected output: Instruction:>
+
+Student: TIMOKHIN
+
 // TC-3-1
 // Tests Requirements R3, R5
 // short form command name, existing student, short form command name
@@ -69,6 +76,13 @@ T: FAFARD
 
 Teacher: FAFARD 
 
+// TC-4-3
+// Tests Requirements R3, R6
+// long form command name, non-existing teacher last name
+// expected output: Instruction:>
+
+Teacher: Timokhin
+
 // TC-5-1
 // Tests Requirements R3, R7
 // short form command name, existing grade
@@ -86,6 +100,13 @@ G: 1
 //                  Instruction:>
 
 Grade: 1
+
+// TC-5-3
+// Tests Requirements R3, R7
+// long form command name, non-existing grade
+// expected output: Instruction:>
+
+Grade: 10
 
 // TC-6-1
 // Tests Requirements R3, R8
@@ -116,6 +137,13 @@ B: 52
 //                  Instruction:> 
 
 Bus: 52
+
+// TC-6-3
+// Tests Requirements R3, R8
+// long form command name, non-existing bus
+// expected output: Instruction:> 
+
+Bus: 510101
 
 // TC-7-1
 // Tests Requirements R3, R9
@@ -221,3 +249,17 @@ Q
 // expected output: program terminates
 
 Quit
+
+// TC-11-1
+// Tests Requirements E1
+// student.txt does not exist
+// expected output: program terminates
+
+python schoolSearch.py
+
+// TC-11-2
+// Tests Requirements E1
+// student.txt is not the right format
+// expected output: program terminates
+
+python schoolSearch.py

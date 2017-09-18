@@ -8,6 +8,9 @@ def runSearch():
       studentList = openFile()
    except:
       return
+   for student in studentList:
+      if len(student) != 8:
+         return
    # Set running value
    # q = 0 = running
    # q = 1 = stopped
