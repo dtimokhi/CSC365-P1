@@ -4,7 +4,7 @@ def openFile():
    studentsDat = open('students.txt', 'r')
    # Make array list
    fullDatList = []
-   i = 0
+   i = 0 
    # enumerate give index as num and value as line
    for num, line in enumerate(studentsDat):
      # Strip a current line
