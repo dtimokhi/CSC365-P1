@@ -15,7 +15,7 @@ def openFile():
    return(fullDatList)
 
 # Get grade command
-# Takes: studentList(2DArr)
+# Takes: studentList(2DArr) 
 # gradeNumber(int)
 # typeGpa(String)
 def getGradeSearch(studentList, gradeNumber, typeGpa = "none"):
