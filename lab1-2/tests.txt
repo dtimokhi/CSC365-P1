@@ -1,6 +1,6 @@
 // CSC 365. Fall 2017
 // Dmitriy Timokhin, Hanson Egbert
-// Lab 1-1 test suite
+// Lab 1-2 test suite
 
 // TC-1
 // Tests Requirement R1
