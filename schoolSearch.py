@@ -1,5 +1,5 @@
 from sFunctions import *
-
+#Hanson was here
 # Run function
 
 def runSearch():
@@ -43,7 +43,7 @@ def runSearch():
                third=split[2]
 
       ### If statements to check command input ###
-      
+
       # Student command
       if(first == "s:" or first == "student:"):
          s = ","
@@ -113,6 +113,3 @@ def runSearch():
 
 # Issue run command
 runSearch()
-
-
-
