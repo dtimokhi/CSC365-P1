@@ -1,0 +1,142 @@
+dtimokhi@unix2:~/csc365 $ python3 schoolSearch.py 
+Instruction:> S: COOKUS
+COOKUS,XUAN,3,107,FAFARD,ROCIO
+Instruction:> Student: COOKUS
+COOKUS,XUAN,3,107,FAFARD,ROCIO
+Instruction:> Student: Timokhin
+Instruction:> S: COOKUS B
+COOKUS,XUAN,52
+Instruction:> Student: COOKUS Bus
+COOKUS,XUAN,52
+Instruction:> T: FAFARD
+COOKUS,XUAN
+ELHADDAD,SHANTE
+SWEDLUND,SHARRI
+CIGANEK,MANIE
+COVINGTON,TOMAS
+EARLY,TORY
+LINHART,LELA
+Instruction:> Teacher: FAFARD
+COOKUS,XUAN
+ELHADDAD,SHANTE
+SWEDLUND,SHARRI
+CIGANEK,MANIE
+COVINGTON,TOMAS
+EARLY,TORY
+LINHART,LELA
+Instruction:> Teacher: Timokhin
+Instruction:> G: 1
+SAELEE,DANILO
+GARTH,JOHN
+Instruction:> Grade: 1
+SAELEE,DANILO
+GARTH,JOHN
+Instruction:> Grade: 10
+Instruction:> B: 52
+COOKUS,XUAN
+ELHADDAD,SHANTE
+IMMERMAN,DEVIN
+OBREIN,STAN
+CORONADO,DIMPLE
+SARAO,DIEDRA
+EARLY,TORY
+KEMERER,ROSETTA
+Instruction:> Bus: 52
+COOKUS,XUAN
+ELHADDAD,SHANTE
+IMMERMAN,DEVIN
+OBREIN,STAN
+CORONADO,DIMPLE
+SARAO,DIEDRA
+EARLY,TORY
+KEMERER,ROSETTA
+Instruction:> Bus: 510101
+Instruction:> G: 3 H
+SWEDLUND,SHARRI,3,107,55,3.24,FAFARD,ROCIO
+Instruction:> Grade: 3 High
+SWEDLUND,SHARRI,3,107,55,3.24,FAFARD,ROCIO
+Instruction:> G: 3 L
+CIGANEK,MANIE,3,107,53,2.79,FAFARD,ROCIO
+Instruction:> G: 3 Low
+CIGANEK,MANIE,3,107,53,2.79,FAFARD,ROCIO
+Instruction:> A: 3
+3,3.048888888888889
+Instruction:> Average: 3
+3,3.048888888888889
+Instruction:> Avrge: 3  
+Instruction:> I
+0: 0
+1: 2
+2: 13
+3: 9
+4: 15
+5: 0
+6: 21
+Instruction:> Info
+0: 0
+1: 2
+2: 13
+3: 9
+4: 15
+5: 0
+6: 21
+Instruction:> Q
+dtimokhi@unix2:~/csc365 $ python3 schoolSearch.py 
+Instruction:> Quit
+dtimokhi@unix2:~/csc365 $ python3 schoolSearch.py 
+dtimokhi@unix2:~/csc365 $ python3 schoolSearch.py 
+dtimokhi@unix2:~/csc365 $
+dtimokhi@unix2:~/csc365/lab1-2 $ python3 schoolsearch.py 
+Instruction:> class: 101
+DURAND, CARLEE,4,101,51,2.91,COOL,REUBEN
+Instruction:> class: 1000
+Instruction:> cteach: 106
+BODZIONY,LUZ
+Instruction:> cteach: 1000
+Instruction:> gteach: 3
+FAFARD,ROCIO
+ALPERT,JONATHAN
+Instruction:> gteach: 3000
+Instruction:> cenroll
+101: 1
+102: 5
+103: 2
+104: 2
+105: 6
+106: 2
+107: 7
+108: 11
+109: 5
+110: 2
+111: 9
+112: 8
+Instruction:> meang
+0: NULL
+1: 2.995
+2: 2.946
+3: 3.049
+4: 2.951
+5: NULL
+6: 2.977
+Instruction:> meant
+FAFARD,ROCIO : 3.014
+BODZIONY,LUZ : 3.09
+ALPERT,JONATHAN : 3.17
+COOL,REUBEN : 2.91
+NISTENDIRK,NANCY : 2.962
+GAMBREL,JAE : 2.96
+HAMER,GAVIN : 2.955
+KERBS,BENITO : 2.976
+CHIONCHIO,PERLA : 2.985
+STEIB,GALE : 2.9
+HANTZ,JED : 2.913
+FALKER,ADOLPH : 2.995
+Instruction:> meanb
+0: 2.953
+51: 3.02
+52: 2.885
+53: 3.056
+54: 2.942
+55: 3.037
+56: 2.922
+Instruction:> 
