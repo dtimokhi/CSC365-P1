@@ -1,5 +1,3 @@
-# Dmitriy Timokhin
-# Hanson Egbert
 # Open File
 def openFile():
    # Open .txt file

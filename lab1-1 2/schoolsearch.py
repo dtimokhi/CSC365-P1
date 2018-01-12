@@ -1,6 +1,5 @@
 from sFunctions import *
-# Dmitriy Timokhin
-# Hanson Egbert
+
 # Run function
 
 def runSearch():
@@ -100,54 +99,6 @@ def runSearch():
          try:
             for grade in getInfo(studentList):
                print(str(grade[0]) + ": " + str(grade[1]))
-         except:
-            continue
-      if(first == "class:"):
-         try:
-            tmpList = getAllStudentsInClass(studentList, int(second))
-            s = ","
-            for student in tmpList:
-               print(s.join(student))
-         except:
-            continue
-      if(first == "cteach:"):
-         try:
-            tmpList = getAllTeachersInClass(studentList, int(second))
-            s = ","
-            for teacher in tmpList:
-               print(s.join(teacher))
-         except:
-            continue
-      if(first == "gteach:"):
-         try:
-            tmpList = getTeachersInGrade(studentList, int(second))
-            s = ","
-            for teacher in tmpList:
-               print(s.join(teacher))
-         except:
-            continue
-      if(first == "cenroll"):
-         try:
-            for classroom in getEnrollment(studentList):
-               print(str(classroom[0]) + ": " + str(classroom[1]))
-         except:
-            continue
-      if(first == "meang"):
-         try:
-            for grade in getMeanGpaGrade(studentList):
-               print(str(grade[0]) + ": " + str(grade[1]))
-         except:
-            continue
-      if(first == "meant"):
-         try:
-            for teacher in getMeanGpaTeacher(studentList):
-               print(str(teacher[0]) + "," + str(teacher[1]) + " : " + str(teacher[2]))
-         except:
-            continue
-      if(first == "meanb"):
-         try:
-            for teacher in getMeanBus(studentList):
-               print(str(teacher[0]) + ": " + str(teacher[1]))
          except:
             continue
       # Quit command

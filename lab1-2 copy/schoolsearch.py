@@ -1,6 +1,5 @@
 from sFunctions import *
-# Dmitriy Timokhin
-# Hanson Egbert
+
 # Run function
 
 def runSearch():

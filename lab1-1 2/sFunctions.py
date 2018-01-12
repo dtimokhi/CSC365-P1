@@ -1,10 +1,7 @@
-# Dmitriy Timokhin
-# Hanson Egbert
 # Open File
 def openFile():
    # Open .txt file
-   studentsDat = open('list.txt', 'r')
-   teacherDat = open('teachers.txt', 'r')
+   studentsDat = open('students.txt', 'r')
    # Make array list
    fullDatList = []
    i = 0
@@ -12,30 +9,11 @@ def openFile():
    for num, line in enumerate(studentsDat):
      # Strip a current line
      fields = line.strip().split(",")
-     newFields = getTeacherVals(fields)
      # Append to a double array
-     fullDatList.append(newFields)
+     fullDatList.append(fields)
    # Return double array
    return(fullDatList)
-def openClassroomsNum():
-   teacherDat = open('teachers.txt', 'r')
-   indexList = []
-   for index, val in enumerate(teacherDat):
-      fields = val.strip().split(",")
-      indexList.append(int(fields[2]))
-   return indexList
-def getTeacherVals(studentList):
-   myList = studentList
-   teacherDat = open('teachers.txt', 'r')
 
-   classNum = int(studentList[3])
-   for teacher in teacherDat:
-      teacher = teacher.strip().split(",")
-      if(classNum == int(teacher[2])):
-         tmpList = [teacher[0].strip(), teacher[1].strip()]
-         break
-   myList.extend(tmpList)
-   return myList
 # Get grade command
 # Takes: studentList(2DArr)
 # gradeNumber(int)
@@ -180,113 +158,6 @@ def getSb(studentList):
    for num, student in enumerate(studentList):
       outList[num] = [student[0], student[1],student[4]]
    return(outList)
-def getAllStudentsInClass(studentList, classNum):
-   indexList = []
-   for num, student in enumerate(studentList):
-      if (int(student[3].strip()) == int(classNum)): 
-         indexList.append(student)
-   return(indexList)
-def getAllTeachersInClass(studentList, classNum):
-   indexList = []
-   for num, student in enumerate(studentList):
-      if (int(student[3].strip()) == int(classNum)): 
-         indexList.append([student[6].strip(), student[7].strip()])
-   for index, val in enumerate(indexList):
-      indexList[index] = "-".join(val)
-   indexList = list(set(indexList))
-   for index, val in enumerate(indexList):
-      indexList[index] = val.split("-")
-   return(indexList)
-def getTeachersInGrade(studentList, gradeNum):
-   newListTmp = getGradeValues(studentList, int(gradeNum))
-   newList = []
-   for index, val in enumerate(newListTmp):
-      newList.append([val[6].strip(), val[7].strip()])
-   for index, val in enumerate(newList):
-      newList[index] = "-".join(val)
-   newList = list(set(newList))
-   for index, val in enumerate(newList):
-      newList[index] = val.split("-")
-   return(newList)
-def getEnrollment(studentList):
-   outList = []
-   for classNum in openClassroomsNum():
-      n = 0
-      for student in studentList:
-         if int(student[3]) == classNum:
-            n = n + 1
-      tmpList = [classNum, n]
-      outList.append(tmpList)
-   return outList
-def getGpaVal(studentList, valNum):
-   outList = []
-   for student in studentList:
-      outList.append(float(student[valNum]))
-   return outList
-def getMeanGpaGrade(studentList):
-   meanList = []
-   for grade in range(7):
-      gradeList = getGradeValues(studentList, grade)
-      gpaList = getGpaVal(gradeList, 5)
-      if(len(gpaList) == 0):
-         meanGpa = "NULL"
-      else:
-         meanGpa = round(sum(gpaList)/float(len(gpaList)), 3)
-      meanList.append([grade, meanGpa])
-   return meanList
-def getUniqueTeachers(studentList):
-   newList = []
-   newListTmp = studentList
-   for index, val in enumerate(newListTmp):
-      newList.append([val[6].strip(), val[7].strip()])
-   for index, val in enumerate(newList):
-      newList[index] = "-".join(val)
-   newList = list(set(newList))
-   for index, val in enumerate(newList):
-      newList[index] = val.split("-")
-   return(newList)
-def getTeacherStudents(studentList, lstName, fstName):
-   indexList = []
-   for num, student in enumerate(studentList):
-      if (student[6] == lstName.upper()) & (student[7] == fstName.upper()): 
-         indexList.append(student)
-   return(indexList)
-def getMeanGpaTeacher(studentList):
-   newTeachers = getUniqueTeachers(studentList)
-   meanList = []
-   for teacher in newTeachers:
-      lstName = teacher[0]
-      fstName = teacher[1]
-      studentsTeacher = getTeacherStudents(studentList, lstName, fstName)
-      gpaList = getGpaVal(studentsTeacher, 5)
-      meanGpa = round(sum(gpaList)/float(len(gpaList)), 3)
-      myAppend = teacher
-      myAppend.append(meanGpa)
-      meanList.append(myAppend)
-   return meanList
-def getUniqueBusRoute(studentList):
-   newList = []
-   newListTmp = studentList
-   for index, val in enumerate(newListTmp):
-      newList.append(int(val[4].strip()))
-   newList = sorted(list(set(newList)))
-   newList = [str(x) for x in newList]
-   return(sorted(newList))
-def getStudentsBus(studentList, busNum):
-   indexList = []
-   for num, student in enumerate(studentList):
-      if(student[4] == busNum): 
-         indexList.append(student)
-   return(indexList)
-def getMeanBus(studentList):
-   busList = getUniqueBusRoute(studentList)
-   meanList = []
-   for bus in busList:
-      studentBus = getStudentsBus(studentList, bus)
-      gpaList = getGpaVal(studentBus, 5)
-      meanGpa = round(sum(gpaList)/float(len(gpaList)), 3)
-      meanList.append([bus, meanGpa])
-   return meanList
 
 
 
